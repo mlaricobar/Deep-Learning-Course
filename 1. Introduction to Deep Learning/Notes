@@ -1,0 +1,29 @@
+
+## Preparing environment
+
+conda create -n style-transfer python=3
+conda activate style-transfer
+conda install tensorflow==1.15.0 scipy==1.1.0 pillow
+pip install moviepy
+python -c "import imageio; imageio.plugins.ffmpeg.download()"
+
+## Using the CNNs
+
+cd /Users/michaelbryanlaricobarzola/Documents/capacitaciones/udacity-deep-learning/Deep-Learning-Course/"1. Introduction to Deep Learning"/fast-style-transfer
+
+conda activate style-transfer
+
+photo_name='belcorp_challenge'
+input_photo=$photo_name'.jpg'
+
+python evaluate.py --checkpoint ./checkpoint/rain-princess.ckpt --in-path ./examples/content/$input_photo --out-path ./examples/results/$photo_name'_rain.jpg'
+
+python evaluate.py --checkpoint ./checkpoint/la_muse.ckpt --in-path ./examples/content/$input_photo --out-path ./examples/results/$photo_name'_muse.jpg'
+
+python evaluate.py --checkpoint ./checkpoint/udnie.ckpt --in-path ./examples/content/$input_photo --out-path ./examples/results/$photo_name'_udnie.jpg'
+
+python evaluate.py --checkpoint ./checkpoint/wave.ckpt --in-path ./examples/content/$input_photo --out-path ./examples/results/$photo_name'_wave.jpg'
+
+python evaluate.py --checkpoint ./checkpoint/wreck.ckpt --in-path ./examples/content/$input_photo --out-path ./examples/results/$photo_name'_wreck.jpg'
+
+python evaluate.py --checkpoint ./checkpoint/scream.ckpt --in-path ./examples/content/$input_photo --out-path ./examples/results/$photo_name'_scream.jpg'
