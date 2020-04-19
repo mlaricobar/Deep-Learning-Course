@@ -4,3 +4,6 @@
 [submodule "1. Introduction to Deep Learning/fast-style-transfer"]
 	path = 1. Introduction to Deep Learning/fast-style-transfer
 	url = https://github.com/lengstrom/fast-style-transfer
+[submodule "1. Introduction to Deep Learning/FlappyBird"]
+	path = 1. Introduction to Deep Learning/FlappyBird
+	url = https://github.com/yenchenlin/DeepLearningFlappyBird
